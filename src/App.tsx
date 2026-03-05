@@ -156,7 +156,7 @@ export default function App() {
       },
       {
         type: "line",
-        text: "loading modules: ui, projects, contact, uptime",
+        text: "loading modules: Theme, Portfolio, Contact, Uptime, About, Help ...",
         variant: "muted",
         speed: 15,
       },
@@ -840,7 +840,7 @@ export default function App() {
                   e.stopPropagation();
                   handleCommand(item.name);
                 }}
-                className="flex items-center gap-2 px-3 py-1.5 border border-white/10 hover:border-aizen-green hover:text-aizen-green transition-all cursor-pointer text-[10px] md:text-xs tracking-widest opacity-80 hover:opacity-100 bg-black/20"
+                className="flex items-center flex-1 gap-2 px-3 py-1.5 border border-white/10 hover:border-aizen-green hover:text-aizen-green transition-all cursor-pointer text-[10px] md:text-xs tracking-widest opacity-80 hover:opacity-100 bg-black/20"
               >
                 <span className="opacity-70">{item.icon}</span>
                 {item.name}
