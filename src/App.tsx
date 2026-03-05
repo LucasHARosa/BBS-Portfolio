@@ -244,43 +244,43 @@ export default function App() {
             type: "line",
             text: "PORTFOLIO".padEnd(20) + "RECENT WORKS",
             variant: "accent",
-            speed: 10,
+            speed: 8,
           },
           {
             type: "line",
             text: "ABOUT".padEnd(20) + "ABOUT US",
             variant: "accent",
-            speed: 10,
+            speed: 8,
           },
           {
             type: "line",
             text: "UPTIME".padEnd(20) + "UPTIME STATUS",
             variant: "accent",
-            speed: 10,
+            speed: 8,
           },
           {
             type: "line",
             text: "CONTACT".padEnd(20) + "EMAILS/LINKS",
             variant: "accent",
-            speed: 10,
+            speed: 8,
           },
           {
             type: "line",
             text: "THEME".padEnd(20) + "CHANGE THEME",
             variant: "accent",
-            speed: 10,
+            speed: 8,
           },
           {
             type: "line",
             text: "CLEAR".padEnd(20) + "CLEAR SCREEN",
             variant: "accent",
-            speed: 10,
+            speed: 8,
           },
           {
             type: "line",
             text: "HELP".padEnd(20) + "SHOW HELP",
             variant: "accent",
-            speed: 10,
+            speed: 8,
           },
           { type: "pause", ms: 200 },
           {
@@ -293,7 +293,7 @@ export default function App() {
         break;
       case "portfolio":
         const page = parseInt(args[0]) || 1;
-        const pageSize = 12;
+        const pageSize = 8;
         const startIndex = (page - 1) * pageSize;
         const pageProjects = projects.slice(startIndex, startIndex + pageSize);
         const totalPages = Math.ceil(projects.length / pageSize);
@@ -313,11 +313,9 @@ export default function App() {
             type: "line",
             text: `${displayIdx.toString().padStart(2, "0")}  ${p.titulo.padEnd(36)} ${p.tags[0]}`,
             variant: "accent",
-            speed: 15,
+            speed: 6,
           });
         });
-
-        portfolioLines.push({ type: "pause", ms: 200 });
 
         let pagesText = "PAGES ";
         for (let i = 1; i <= totalPages; i++) {
@@ -325,13 +323,19 @@ export default function App() {
         }
         portfolioLines.push({
           type: "line",
-          text: "\n" + pagesText,
+          text: pagesText,
           variant: "muted",
           instant: true,
         });
         portfolioLines.push({
           type: "line",
-          text: "\nINPUT OR CLICK 'HOME' TO LIST AVAILABLE COMMANDS.",
+          text: '\nviTYPE "VIEW <PROJECT_ID>" TO SEE PROJECT DETAILS.',
+          variant: "muted",
+          instant: true,
+        });
+        portfolioLines.push({
+          type: "line",
+          text: "INPUT OR CLICK 'HOME' TO LIST AVAILABLE COMMANDS.",
           variant: "muted",
           instant: true,
         });
@@ -409,8 +413,19 @@ export default function App() {
           },
         ]);
         break;
-      case "uptime":
+      case "uptime": {
         const now = new Date();
+        const startDate = new Date("2026-02-28T19:28:00");
+        const diffMs = now.getTime() - startDate.getTime();
+        const uptimeDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+        const uptimeHours = Math.floor(
+          (diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const uptimeMinutes = Math.floor(
+          (diffMs % (1000 * 60 * 60)) / (1000 * 60),
+        );
+        const uptimeSeconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+        const uptimeStr = `${uptimeDays} days, ${String(uptimeHours).padStart(2, "0")}:${String(uptimeMinutes).padStart(2, "0")}:${String(uptimeSeconds).padStart(2, "0")}`;
         enqueue([
           {
             type: "line",
@@ -418,7 +433,11 @@ export default function App() {
             variant: "success",
             speed: 20,
           },
-          { type: "line", text: `UPTIME: 142 days, 04:22:11`, speed: 10 },
+          {
+            type: "line",
+            text: `UPTIME: ${uptimeStr}`,
+            speed: 10,
+          },
           {
             type: "line",
             text: `LOCAL TIME: ${now.toLocaleTimeString()} ${now.toLocaleDateString()}`,
@@ -433,6 +452,7 @@ export default function App() {
           },
         ]);
         break;
+      }
       case "contact":
         enqueue([
           {
@@ -623,17 +643,14 @@ export default function App() {
       let matchFound = false;
 
       const tagMatch = remainingText.match(
-        /^(\s{2,})(APP|WEB|WEB\|APP|MOBILE|API|FULLSTACK)/i,
+        /^(\s{2,})(WEB[|/]APP|WEB|APP|MOBILE|API|FULLSTACK)/i,
       );
       if (tagMatch) {
         const spaces = tagMatch[1];
         const tag = tagMatch[2];
         elements.push(spaces);
         elements.push(
-          <span
-            key={elements.length}
-            className="text-aizen-cyan opacity-80 italic"
-          >
+          <span key={elements.length} className="text-gray-400 italic">
             {tag}
           </span>,
         );
@@ -770,7 +787,7 @@ export default function App() {
           {!isBooting && (
             <div className="flex items-center gap-3 pt-4">
               <span className="text-aizen-green font-bold">$</span>
-              <div className="relative flex-1">
+              <div className="relative flex-1 ">
                 <input
                   ref={inputRef}
                   type="text"
@@ -778,7 +795,7 @@ export default function App() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={onKeyDown}
                   autoFocus
-                  className="w-full bg-transparent border-none outline-none text-aizen-fg caret-transparent"
+                  className="w-full bg-transparent border-none outline-none focus:outline-none focus:ring-0 text-aizen-fg caret-transparent cursor-none"
                   spellCheck={false}
                   autoComplete="off"
                 />

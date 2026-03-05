@@ -15,7 +15,8 @@ export const projects: Project[] = [
   {
     id: 1,
     titulo: "DubPay",
-    descricao: "Plataforma completa de fintech desenvolvida para revolucionar transações financeiras digitais. Sistema robusto que oferece soluções de pagamento seguras e eficientes.",
+    descricao:
+      "Plataforma completa de fintech desenvolvida para revolucionar transações financeiras digitais. Sistema robusto que oferece soluções de pagamento seguras e eficientes.",
     tags: ["APP"],
     imagem: "/imagens/dubpay.png",
     Link: "https://www.dubpay.com/",
@@ -25,7 +26,8 @@ export const projects: Project[] = [
   {
     id: 2,
     titulo: "Mouv Brasil",
-    descricao: "Sistema completo de gestão e comercialização de ingressos para eventos. Plataforma que conecta organizadores e público.",
+    descricao:
+      "Sistema completo de gestão e comercialização de ingressos para eventos. Plataforma que conecta organizadores e público.",
     tags: ["WEB"],
     imagem: "/imagens/mouv.png",
     Link: "https://www.mouvbrasil.com/",
@@ -35,8 +37,9 @@ export const projects: Project[] = [
   {
     id: 3,
     titulo: "SporTickets",
-    descricao: "Plataforma especializada em comercialização de ingressos para eventos esportivos. Sistema que oferece experiência otimizada de compra.",
-    tags: ["WEB|APP"],
+    descricao:
+      "Plataforma especializada em comercialização de ingressos para eventos esportivos. Sistema que oferece experiência otimizada de compra.",
+    tags: ["WEB/APP"],
     imagem: "/imagens/sporticket.png",
     Link: "https://www.sportickets.com.br/",
     LinkGit: "",
@@ -45,7 +48,8 @@ export const projects: Project[] = [
   {
     id: 4,
     titulo: "Base 3",
-    descricao: "Plataforma de gestão de escolas, cursos e alunos. Sistema integrado que facilita administração acadêmica.",
+    descricao:
+      "Plataforma de gestão de escolas, cursos e alunos. Sistema integrado que facilita administração acadêmica.",
     tags: ["WEB"],
     imagem: "/imagens/base3.png",
     Link: "https://base3edu.com.br/",
@@ -55,7 +59,8 @@ export const projects: Project[] = [
   {
     id: 5,
     titulo: "Nacional Go",
-    descricao: "Plataforma líder nacional em transporte veicular que gerencia todo processo logístico de movimentação de veículos.",
+    descricao:
+      "Plataforma líder nacional em transporte veicular que gerencia todo processo logístico de movimentação de veículos.",
     tags: ["WEB"],
     imagem: "/imagens/nacional.png",
     Link: "https://app.nacionalgo.com.br/",
@@ -65,7 +70,8 @@ export const projects: Project[] = [
   {
     id: 6,
     titulo: "Anac Arquitetura",
-    descricao: "Website institucional desenvolvido para escritório de arquitetura renomado. Plataforma elegante que apresenta portfólio completo.",
+    descricao:
+      "Website institucional desenvolvido para escritório de arquitetura renomado. Plataforma elegante que apresenta portfólio completo.",
     tags: ["WEB"],
     imagem: "/imagens/anac.png",
     Link: "https://anacotrim.com.br/",
@@ -75,7 +81,8 @@ export const projects: Project[] = [
   {
     id: 7,
     titulo: "Cortex",
-    descricao: "Aplicativo mobile para monitoramento IoT de recursos em tempo real. Sistema inteligente que recebe dados de sensores na nuvem.",
+    descricao:
+      "Aplicativo mobile para monitoramento IoT de recursos em tempo real. Sistema inteligente que recebe dados de sensores na nuvem.",
     tags: ["APP"],
     imagem: "/imagens/cortex.png",
     Link: "",
@@ -87,7 +94,8 @@ export const projects: Project[] = [
   {
     id: 8,
     titulo: "Vale Energia",
-    descricao: "Sistema web completo para gestão e pagamento de contas de energia elétrica. Plataforma que facilita pagamentos.",
+    descricao:
+      "Sistema web completo para gestão e pagamento de contas de energia elétrica. Plataforma que facilita pagamentos.",
     tags: ["WEB"],
     imagem: "/imagens/valeenergia.png",
     Link: "https://hml.valeenergia.site",
@@ -97,7 +105,8 @@ export const projects: Project[] = [
   {
     id: 9,
     titulo: "Quiz Programing",
-    descricao: "Aplicativo mobile interativo para avaliação de conhecimentos em programação com perguntas dinâmicas.",
+    descricao:
+      "Aplicativo mobile interativo para avaliação de conhecimentos em programação com perguntas dinâmicas.",
     tags: ["APP"],
     imagem: "/imagens/quizprogram.png",
     Link: "",
@@ -107,7 +116,8 @@ export const projects: Project[] = [
   {
     id: 10,
     titulo: "I Weather",
-    descricao: "Aplicativo mobile de previsão meteorológica com dados em tempo real e cobertura completa de testes.",
+    descricao:
+      "Aplicativo mobile de previsão meteorológica com dados em tempo real e cobertura completa de testes.",
     tags: ["APP"],
     imagem: "/imagens/iweather.png",
     Link: "",
@@ -117,19 +127,22 @@ export const projects: Project[] = [
   {
     id: 11,
     titulo: "Arthos",
-    descricao: "Sistema mobile de controle de acesso inteligente para ambientes corporativos.",
+    descricao:
+      "Sistema mobile de controle de acesso inteligente para ambientes corporativos.",
     tags: ["APP"],
     imagem: "/imagens/Arthos.png",
     Link: "",
     LinkGit: "",
-    LinkGoogle: "https://play.google.com/store/apps/details?id=com.lucash_rosa.remapp",
+    LinkGoogle:
+      "https://play.google.com/store/apps/details?id=com.lucash_rosa.remapp",
     LinkApple: "https://apps.apple.com/br/app/arthos/id6526462876",
     tipo: ["mobile"],
   },
   {
     id: 12,
     titulo: "Gym Train",
-    descricao: "Aplicativo mobile completo para gestão de treinos e evolução física.",
+    descricao:
+      "Aplicativo mobile completo para gestão de treinos e evolução física.",
     tags: ["APP"],
     imagem: "/imagens/gyntrain.png",
     Link: "",
@@ -149,7 +162,8 @@ export const projects: Project[] = [
   {
     id: 14,
     titulo: "Timer Pomodoro",
-    descricao: "Aplicação web baseada na técnica Pomodoro para otimização de produtividade.",
+    descricao:
+      "Aplicação web baseada na técnica Pomodoro para otimização de produtividade.",
     tags: ["WEB"],
     imagem: "/imagens/timer_pomoro_1.png",
     Link: "https://lucasharosa.github.io/Timer-Pomodoro/",
@@ -159,8 +173,9 @@ export const projects: Project[] = [
   {
     id: 15,
     titulo: "Habits",
-    descricao: "Plataforma full stack multiplataforma para rastreamento e desenvolvimento de hábitos saudáveis.",
-    tags: ["WEB|APP"],
+    descricao:
+      "Plataforma full stack multiplataforma para rastreamento e desenvolvimento de hábitos saudáveis.",
+    tags: ["WEB/APP"],
     imagem: "/imagens/habits.png",
     Link: "",
     LinkGit: "https://github.com/LucasHARosa/Habit",
@@ -169,7 +184,8 @@ export const projects: Project[] = [
   {
     id: 16,
     titulo: "Coffee Delivery",
-    descricao: "E-commerce completo especializado em cafés especiais com carrinho interativo.",
+    descricao:
+      "E-commerce completo especializado em cafés especiais com carrinho interativo.",
     tags: ["SHOP"],
     imagem: "/imagens/coffe_deliveryHome.png",
     Link: "https://lucasharosa.github.io/Coffee-Delivery/",
@@ -179,7 +195,8 @@ export const projects: Project[] = [
   {
     id: 17,
     titulo: "Enigm",
-    descricao: "Jogo de adivinhação de palavras inspirado no TERMO/Wordle com feedback visual.",
+    descricao:
+      "Jogo de adivinhação de palavras inspirado no TERMO/Wordle com feedback visual.",
     tags: ["WEB"],
     imagem: "/imagens/Enigm.png",
     Link: "https://enigm.vercel.app/",
@@ -187,4 +204,3 @@ export const projects: Project[] = [
     tipo: ["frontend"],
   },
 ];
-

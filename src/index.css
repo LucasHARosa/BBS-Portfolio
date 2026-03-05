@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 @theme {
   --font-terminal: "VT323", monospace;
-  
+
   /* Aizen Dark inspired colors */
   --color-aizen-bg: #1c1c1c;
   --color-aizen-fg: #b2b2b2;
@@ -19,21 +19,33 @@
   body {
     @apply bg-aizen-bg text-aizen-fg font-terminal overflow-hidden antialiased;
     text-shadow: 0 0 2px rgba(178, 178, 178, 0.3);
-    font-size: 22px; /* Increased from default */
+    font-size: 22px;
   }
 }
 
 @layer components {
   .crt-overlay {
     @apply pointer-events-none fixed inset-0 z-50;
-    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 50%), 
-                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-    background-size: 100% 2px, 3px 100%;
+    background:
+      linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 50%),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.08),
+        rgba(0, 255, 0, 0.04),
+        rgba(0, 0, 255, 0.03)
+      );
+    background-size:
+      100% 2px,
+      3px 100%;
   }
 
   .crt-vignette {
     @apply pointer-events-none fixed inset-0 z-40;
-    background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.4) 100%);
+    background: radial-gradient(
+      circle,
+      transparent 50%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
   }
 
   .crt-flicker {
@@ -53,7 +65,7 @@
 
   .terminal-grid {
     @apply pointer-events-none fixed inset-0 z-0 opacity-[0.02];
-    background-image: 
+    background-image:
       linear-gradient(to right, #fff 1px, transparent 1px),
       linear-gradient(to bottom, #fff 1px, transparent 1px);
     background-size: 3px 3px;
@@ -61,20 +73,42 @@
 }
 
 @keyframes flicker {
-  0% { opacity: 0.98; }
-  5% { opacity: 0.95; }
-  10% { opacity: 0.99; }
-  15% { opacity: 0.97; }
-  20% { opacity: 0.98; }
-  25% { opacity: 0.99; }
-  30% { opacity: 0.96; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.98;
+  }
+  5% {
+    opacity: 0.95;
+  }
+  10% {
+    opacity: 0.99;
+  }
+  15% {
+    opacity: 0.97;
+  }
+  20% {
+    opacity: 0.98;
+  }
+  25% {
+    opacity: 0.99;
+  }
+  30% {
+    opacity: 0.96;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes scanline {
-  0% { bottom: 100%; }
-  80% { bottom: 100%; }
-  100% { bottom: -100px; }
+  0% {
+    bottom: 100%;
+  }
+  80% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: -100px;
+  }
 }
 
 /* Custom Scrollbar */
@@ -96,7 +130,11 @@
 }
 
 @keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
-
