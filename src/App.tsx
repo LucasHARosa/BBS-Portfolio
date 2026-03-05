@@ -323,13 +323,13 @@ export default function App() {
         }
         portfolioLines.push({
           type: "line",
-          text: pagesText,
+          text: "\n" + pagesText,
           variant: "muted",
           instant: true,
         });
         portfolioLines.push({
           type: "line",
-          text: '\nviTYPE "VIEW <PROJECT_ID>" TO SEE PROJECT DETAILS.',
+          text: '\nTYPE "VIEW <PROJECT_ID>" TO SEE PROJECT DETAILS.',
           variant: "muted",
           instant: true,
         });
@@ -476,6 +476,12 @@ export default function App() {
           {
             type: "line",
             text: "LinkedIn: linkedin.com/in/lucas-henrique-alves-rosa/",
+            variant: "info",
+            speed: 10,
+          },
+          {
+            type: "line",
+            text: "Portfolio: lucasrosa.dev.br",
             variant: "info",
             speed: 10,
           },
@@ -697,7 +703,11 @@ export default function App() {
               className="underline decoration-1 underline-offset-4 cursor-pointer hover:opacity-80"
               onClick={(e) => {
                 e.stopPropagation();
-                handleCommand(`view ${project.titulo}`);
+                if (project.Link) {
+                  window.open(project.Link, "_blank", "noopener,noreferrer");
+                } else {
+                  handleCommand(`view ${project.titulo}`);
+                }
               }}
             >
               {matchText}
@@ -800,11 +810,11 @@ export default function App() {
                   autoComplete="off"
                 />
                 <div
-                  className="absolute left-0 top-0 pointer-events-none flex items-center"
+                  className="absolute inset-0 pointer-events-none flex items-center"
                   style={{ color: THEMES[currentTheme].fg }}
                 >
                   <span>{input}</span>
-                  <span className="w-3 h-6 bg-current ml-1 cursor-blink" />
+                  <span className="w-[1ch] h-[1em] bg-current ml-[1px] cursor-blink" />
                 </div>
               </div>
             </div>

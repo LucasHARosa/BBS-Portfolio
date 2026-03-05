@@ -14,14 +14,14 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    titulo: "DubPay",
+    titulo: "Vale Energia",
     descricao:
-      "Plataforma completa de fintech desenvolvida para revolucionar transações financeiras digitais. Sistema robusto que oferece soluções de pagamento seguras e eficientes.",
-    tags: ["APP"],
-    imagem: "/imagens/dubpay.png",
-    Link: "https://www.dubpay.com/",
+      "Sistema web completo para gestão e pagamento de contas de energia elétrica. Plataforma que facilita pagamentos.",
+    tags: ["WEB"],
+    imagem: "/imagens/valeenergia.png",
+    Link: "https://hml.valeenergia.site",
     LinkGit: "",
-    tipo: ["frontend", "principais"],
+    tipo: ["frontend", "backend", "principais"],
   },
   {
     id: 2,
@@ -93,14 +93,14 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    titulo: "Vale Energia",
+    titulo: "DubPay",
     descricao:
-      "Sistema web completo para gestão e pagamento de contas de energia elétrica. Plataforma que facilita pagamentos.",
-    tags: ["WEB"],
-    imagem: "/imagens/valeenergia.png",
-    Link: "https://hml.valeenergia.site",
+      "Plataforma completa de fintech desenvolvida para revolucionar transações financeiras digitais. Sistema robusto que oferece soluções de pagamento seguras e eficientes.",
+    tags: ["APP"],
+    imagem: "/imagens/dubpay.png",
+    Link: "https://dubpay.com.br/",
     LinkGit: "",
-    tipo: ["frontend", "backend", "principais"],
+    tipo: ["frontend", "principais"],
   },
   {
     id: 9,
