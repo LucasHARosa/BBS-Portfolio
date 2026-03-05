@@ -1,5 +1,5 @@
 {
-  "name": "Retro Terminal Portfolio",
-  "description": "A CRT-style terminal portfolio inspired by Aizen Dark theme, featuring a command-line interface and retro animations.",
+  "name": "BBS-Portfolio",
+  "description": "A retro BBS/terminal-style developer portfolio. Navigate through projects and info using CLI commands in a fully interactive CRT-emulated interface.",
   "requestFramePermissions": []
 }
