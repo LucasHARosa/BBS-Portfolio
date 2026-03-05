@@ -144,21 +144,21 @@ export default function App() {
       { type: "pause", ms: 400 },
       {
         type: "line",
-        text: `theme: Aizen Dark (iTerm2)`,
+        text: `theme: Aizen Dark `,
         variant: "info",
-        speed: 20,
+        speed: 10,
       },
       {
         type: "line",
         text: "terminal: vt-220 | cols: 100 | rows: 30",
-        variant: "info",
-        speed: 20,
+        variant: "muted",
+        speed: 10,
       },
       {
         type: "line",
         text: "loading modules: Theme, Portfolio, Contact, Uptime, About, Help ...",
         variant: "muted",
-        speed: 15,
+        speed: 10,
       },
       { type: "pause", ms: 300 },
       {
@@ -185,7 +185,7 @@ export default function App() {
         type: "line",
         text: "WELCOME TO LUCAS ROSA PORTFOLIO v2.4.0",
         variant: "accent",
-        speed: 40,
+        speed: 30,
       },
       {
         type: "line",
