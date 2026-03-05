@@ -1,7 +1,7 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/LucasHARosa/BBS-Portfolio)
-![GitHub language count](https://img.shields.io/github/languages/count/LucasHARosa/BBS-Portfolio)
-![GitHub top language](https://img.shields.io/github/languages/top/LucasHARosa/BBS-Portfolio)
-![GitHub last commit](https://img.shields.io/github/last-commit/LucasHARosa/BBS-Portfolio)
+![GitHub repo size](https://img.shields.io/github/repo-size/LucasHARosa/BBS-Portolio)
+![GitHub language count](https://img.shields.io/github/languages/count/LucasHARosa/BBS-Portolio)
+![GitHub top language](https://img.shields.io/github/languages/top/LucasHARosa/BBS-Portolio)
+![GitHub last commit](https://img.shields.io/github/last-commit/LucasHARosa/BBS-Portolio)
 
 # BBS-Portfolio
 
