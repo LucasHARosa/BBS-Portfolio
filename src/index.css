@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@theme {
+  --font-terminal: "VT323", monospace;
+  
+  /* Aizen Dark inspired colors */
+  --color-aizen-bg: #1c1c1c;
+  --color-aizen-fg: #b2b2b2;
+  --color-aizen-red: #e84c32;
+  --color-aizen-green: #7bb531;
+  --color-aizen-yellow: #db7b0d;
+  --color-aizen-blue: #1360a8;
+  --color-aizen-magenta: #a04b73;
+  --color-aizen-cyan: #0e717c;
+}
+
+@layer base {
+  body {
+    @apply bg-aizen-bg text-aizen-fg font-terminal overflow-hidden antialiased;
+    text-shadow: 0 0 2px rgba(178, 178, 178, 0.3);
+    font-size: 22px; /* Increased from default */
+  }
+}
+
+@layer components {
+  .crt-overlay {
+    @apply pointer-events-none fixed inset-0 z-50;
+    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 2px, 3px 100%;
+  }
+
+  .crt-vignette {
+    @apply pointer-events-none fixed inset-0 z-40;
+    background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.4) 100%);
+  }
+
+  .crt-flicker {
+    animation: flicker 0.15s infinite;
+  }
+
+  .scanline {
+    width: 100%;
+    height: 1px;
+    z-index: 45;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0.1;
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 6s linear infinite;
+  }
+
+  .terminal-grid {
+    @apply pointer-events-none fixed inset-0 z-0 opacity-[0.02];
+    background-image: 
+      linear-gradient(to right, #fff 1px, transparent 1px),
+      linear-gradient(to bottom, #fff 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+@keyframes flicker {
+  0% { opacity: 0.98; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.99; }
+  15% { opacity: 0.97; }
+  20% { opacity: 0.98; }
+  25% { opacity: 0.99; }
+  30% { opacity: 0.96; }
+  100% { opacity: 1; }
+}
+
+@keyframes scanline {
+  0% { bottom: 100%; }
+  80% { bottom: 100%; }
+  100% { bottom: -100px; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
