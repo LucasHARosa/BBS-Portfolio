@@ -156,49 +156,49 @@ export default function App() {
       },
       {
         type: "line",
-        text: "loading modules: Theme, Portfolio, Contact, Uptime, About, Help ...",
+        text: "loading modules: Theme, Portfolio, Contact, Uptime, About, Help",
         variant: "muted",
         speed: 10,
       },
       { type: "pause", ms: 300 },
       {
         type: "line",
-        text: "mounting /portfolio ... LOADING",
-        variant: "warning",
+        text: "\nPUBLIC.LUCASROSA.2.4.0 LOADING...",
+        variant: "muted",
         speed: 10,
       },
       { type: "pause", ms: 1000 },
       {
         type: "line",
-        text: "mounting /portfolio ... OK",
+        text: "PUBLIC.LUCASROSA.2.4.0 OK!",
         variant: "success",
         speed: 10,
       },
       { type: "pause", ms: 200 },
+      // {
+      //   type: "line",
+      //   text: "--------------------------------------------------",
+      //   variant: "muted",
+      //   instant: true,
+      // },
       {
         type: "line",
-        text: "--------------------------------------------------",
-        variant: "muted",
-        instant: true,
-      },
-      {
-        type: "line",
-        text: "WELCOME TO LUCAS ROSA PORTFOLIO v2.4.0",
+        text: "\nWELCOME TO LUCAS ROSA PORTFOLIO v2.4.0",
         variant: "accent",
         speed: 30,
       },
       {
         type: "line",
-        text: "TYPE OR CLICK 'HOME' TO START",
-        variant: "accent",
+        text: "TYPE OR CLICK 'HOME' TO START\n",
+        variant: "muted",
         speed: 30,
       },
-      {
-        type: "line",
-        text: "--------------------------------------------------",
-        variant: "muted",
-        instant: true,
-      },
+      // {
+      //   type: "line",
+      //   text: "--------------------------------------------------",
+      //   variant: "muted",
+      //   instant: true,
+      // },
       { type: "boot_complete" },
     ];
 
@@ -597,7 +597,7 @@ export default function App() {
       case "accent":
         return "text-aizen-yellow font-bold";
       case "muted":
-        return "text-aizen-fg opacity-50";
+        return "text-aizen-fg opacity-80";
       case "error":
         return "text-aizen-red";
       case "success":
@@ -862,7 +862,7 @@ export default function App() {
         .text-aizen-green { color: ${THEMES[currentTheme].accent}; }
         .text-aizen-yellow { color: ${currentTheme === "aizen" ? "#db7b0d" : THEMES[currentTheme].accent}; }
         .text-aizen-red { color: ${currentTheme === "aizen" ? "#e84c32" : THEMES[currentTheme].fg}; }
-        .text-aizen-cyan { color: ${currentTheme === "aizen" ? "#0e717c" : THEMES[currentTheme].accent}; }
+        .text-aizen-cyan { color: ${currentTheme === "aizen" ? "#00FFFF" : THEMES[currentTheme].accent}; }
       `,
         }}
       />
