@@ -14,14 +14,14 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    titulo: "Vale Energia",
+    titulo: "Base 3",
     descricao:
-      "Sistema web completo para gestão e pagamento de contas de energia elétrica. Plataforma que facilita pagamentos.",
+      "Plataforma de gestão de escolas, cursos e alunos. Sistema integrado que facilita administração acadêmica.",
     tags: ["WEB"],
-    imagem: "/imagens/valeenergia.png",
-    Link: "https://hml.valeenergia.site",
+    imagem: "/imagens/base3.png",
+    Link: "https://base3edu.com.br/",
     LinkGit: "",
-    tipo: ["frontend", "backend", "principais"],
+    tipo: ["backend", "frontend", "principais"],
   },
   {
     id: 2,
@@ -47,14 +47,15 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    titulo: "Base 3",
+
+    titulo: "Gym Train",
     descricao:
-      "Plataforma de gestão de escolas, cursos e alunos. Sistema integrado que facilita administração acadêmica.",
-    tags: ["WEB"],
-    imagem: "/imagens/base3.png",
-    Link: "https://base3edu.com.br/",
-    LinkGit: "",
-    tipo: ["backend", "frontend", "principais"],
+      "Aplicativo mobile completo para gestão de treinos e evolução física.",
+    tags: ["APP"],
+    imagem: "/imagens/gyntrain.png",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/Gym-Train",
+    tipo: ["mobile"],
   },
   {
     id: 5,
@@ -140,14 +141,14 @@ export const projects: Project[] = [
   },
   {
     id: 12,
-    titulo: "Gym Train",
+    titulo: "Vale Energia",
     descricao:
-      "Aplicativo mobile completo para gestão de treinos e evolução física.",
-    tags: ["APP"],
-    imagem: "/imagens/gyntrain.png",
-    Link: "",
-    LinkGit: "https://github.com/LucasHARosa/Gym-Train",
-    tipo: ["mobile"],
+      "Sistema web completo para gestão e pagamento de contas de energia elétrica. Plataforma que facilita pagamentos.",
+    tags: ["WEB"],
+    imagem: "/imagens/valeenergia.png",
+    Link: "https://hml.valeenergia.site",
+    LinkGit: "",
+    tipo: ["frontend", "backend", "principais"],
   },
   {
     id: 13,
