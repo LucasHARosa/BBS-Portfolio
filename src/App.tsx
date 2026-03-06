@@ -649,7 +649,7 @@ export default function App() {
       let matchFound = false;
 
       const tagMatch = remainingText.match(
-        /^(\s{2,})(WEB[|/]APP|WEB|APP|MOBILE|API|FULLSTACK)/i,
+        /^(\s{2,})(WEB[|/]APP|WEB|APP|MOBILE|API|FULLSTACK|SHOP)/i,
       );
       if (tagMatch) {
         const spaces = tagMatch[1];
