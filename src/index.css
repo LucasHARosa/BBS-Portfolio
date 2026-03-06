@@ -30,9 +30,9 @@
       linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 50%),
       linear-gradient(
         90deg,
-        rgba(255, 0, 0, 0.08),
-        rgba(0, 255, 0, 0.04),
-        rgba(0, 0, 255, 0.03)
+        rgba(255, 0, 0, 0.01),
+        rgba(0, 255, 0, 0.01),
+        rgba(0, 0, 255, 0.1)
       );
     background-size:
       100% 2px,
