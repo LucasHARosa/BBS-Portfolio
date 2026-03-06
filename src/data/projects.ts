@@ -11,9 +11,18 @@ export interface Project {
   tipo: string[];
 }
 
-export const projects: Project[] = [
+const projectsData: Omit<Project, "id">[] = [
   {
-    id: 1,
+    titulo: "Lucas Rosa - Portfolio",
+    descricao:
+      "Portfolio pessoal com design web moderno. Apresenta projetos, habilidades e experiências profissionais.",
+    tags: ["WEB"],
+    imagem: "/imagens/portfolio.png",
+    Link: "https://lucasrosa.dev.br/",
+    LinkGit: "",
+    tipo: ["frontend", "principais"],
+  },
+  {
     titulo: "Base 3",
     descricao:
       "Plataforma de gestão de escolas, cursos e alunos. Sistema integrado que facilita administração acadêmica.",
@@ -24,7 +33,6 @@ export const projects: Project[] = [
     tipo: ["backend", "frontend", "principais"],
   },
   {
-    id: 2,
     titulo: "Mouv Brasil",
     descricao:
       "Sistema completo de gestão e comercialização de ingressos para eventos. Plataforma que conecta organizadores e público.",
@@ -35,7 +43,6 @@ export const projects: Project[] = [
     tipo: ["backend", "frontend", "principais"],
   },
   {
-    id: 3,
     titulo: "SporTickets",
     descricao:
       "Plataforma especializada em comercialização de ingressos para eventos esportivos. Sistema que oferece experiência otimizada de compra.",
@@ -46,8 +53,6 @@ export const projects: Project[] = [
     tipo: ["backend", "frontend", "principais"],
   },
   {
-    id: 4,
-
     titulo: "Gym Train",
     descricao:
       "Aplicativo mobile completo para gestão de treinos e evolução física.",
@@ -58,7 +63,6 @@ export const projects: Project[] = [
     tipo: ["mobile"],
   },
   {
-    id: 5,
     titulo: "Nacional Go",
     descricao:
       "Plataforma líder nacional em transporte veicular que gerencia todo processo logístico de movimentação de veículos.",
@@ -69,7 +73,6 @@ export const projects: Project[] = [
     tipo: ["backend", "frontend", "principais"],
   },
   {
-    id: 6,
     titulo: "Anac Arquitetura",
     descricao:
       "Website institucional desenvolvido para escritório de arquitetura renomado. Plataforma elegante que apresenta portfólio completo.",
@@ -80,7 +83,6 @@ export const projects: Project[] = [
     tipo: ["frontend", "principais"],
   },
   {
-    id: 7,
     titulo: "Cortex",
     descricao:
       "Aplicativo mobile para monitoramento IoT de recursos em tempo real. Sistema inteligente que recebe dados de sensores na nuvem.",
@@ -93,7 +95,6 @@ export const projects: Project[] = [
     tipo: ["mobile", "principais"],
   },
   {
-    id: 8,
     titulo: "DubPay",
     descricao:
       "Plataforma completa de fintech desenvolvida para revolucionar transações financeiras digitais. Sistema robusto que oferece soluções de pagamento seguras e eficientes.",
@@ -104,7 +105,6 @@ export const projects: Project[] = [
     tipo: ["frontend", "principais"],
   },
   {
-    id: 9,
     titulo: "Quiz Programing",
     descricao:
       "Aplicativo mobile interativo para avaliação de conhecimentos em programação com perguntas dinâmicas.",
@@ -115,7 +115,6 @@ export const projects: Project[] = [
     tipo: ["mobile"],
   },
   {
-    id: 10,
     titulo: "I Weather",
     descricao:
       "Aplicativo mobile de previsão meteorológica com dados em tempo real e cobertura completa de testes.",
@@ -126,7 +125,6 @@ export const projects: Project[] = [
     tipo: ["mobile"],
   },
   {
-    id: 11,
     titulo: "Arthos",
     descricao:
       "Sistema mobile de controle de acesso inteligente para ambientes corporativos.",
@@ -140,7 +138,6 @@ export const projects: Project[] = [
     tipo: ["mobile"],
   },
   {
-    id: 12,
     titulo: "Vale Energia",
     descricao:
       "Sistema web completo para gestão e pagamento de contas de energia elétrica. Plataforma que facilita pagamentos.",
@@ -151,7 +148,6 @@ export const projects: Project[] = [
     tipo: ["frontend", "backend", "principais"],
   },
   {
-    id: 13,
     titulo: "DT Money",
     descricao: "Aplicação web para gestão completa de finanças pessoais.",
     tags: ["WEB"],
@@ -161,7 +157,6 @@ export const projects: Project[] = [
     tipo: ["frontend"],
   },
   {
-    id: 14,
     titulo: "Timer Pomodoro",
     descricao:
       "Aplicação web baseada na técnica Pomodoro para otimização de produtividade.",
@@ -172,7 +167,6 @@ export const projects: Project[] = [
     tipo: ["frontend"],
   },
   {
-    id: 15,
     titulo: "Habits",
     descricao:
       "Plataforma full stack multiplataforma para rastreamento e desenvolvimento de hábitos saudáveis.",
@@ -183,7 +177,6 @@ export const projects: Project[] = [
     tipo: ["mobile", "frontend", "backend"],
   },
   {
-    id: 16,
     titulo: "Coffee Delivery",
     descricao:
       "E-commerce completo especializado em cafés especiais com carrinho interativo.",
@@ -194,7 +187,6 @@ export const projects: Project[] = [
     tipo: ["frontend"],
   },
   {
-    id: 17,
     titulo: "Enigm",
     descricao:
       "Jogo de adivinhação de palavras inspirado no TERMO/Wordle com feedback visual.",
@@ -205,3 +197,8 @@ export const projects: Project[] = [
     tipo: ["frontend"],
   },
 ];
+
+export const projects: Project[] = projectsData.map((p, i) => ({
+  ...p,
+  id: i + 1,
+}));
