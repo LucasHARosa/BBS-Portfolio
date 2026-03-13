@@ -443,7 +443,7 @@ export default function App() {
             text: `LOCAL TIME: ${now.toLocaleTimeString()} ${now.toLocaleDateString()}`,
             speed: 10,
           },
-          { type: "line", text: `LOCATION: Brazil/Sao_Paulo`, speed: 10 },
+          { type: "line", text: `LOCATION: Brazil/Brasilia`, speed: 10 },
           {
             type: "line",
             text: "\nINPUT OR CLICK 'HOME' TO LIST AVAILABLE COMMANDS.",
@@ -464,12 +464,6 @@ export default function App() {
           {
             type: "line",
             text: "Email: lucashrosa99@gmail.com",
-            variant: "info",
-            speed: 10,
-          },
-          {
-            type: "line",
-            text: "WhatsApp: https://wa.me/5561992836376",
             variant: "info",
             speed: 10,
           },
