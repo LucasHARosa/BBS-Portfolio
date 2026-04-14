@@ -19,7 +19,13 @@
   body {
     @apply bg-aizen-bg text-aizen-fg font-terminal overflow-hidden antialiased;
     text-shadow: 0 0 2px rgba(178, 178, 178, 0.3);
-    font-size: 22px;
+    font-size: 15px;
+  }
+
+  @media (min-width: 640px) {
+    body {
+      font-size: 22px;
+    }
   }
 }
 

@@ -293,7 +293,8 @@ export default function App() {
         break;
       case "portfolio":
         const page = parseInt(args[0]) || 1;
-        const pageSize = 8;
+        const isMobile = window.innerWidth < 640;
+        const pageSize = isMobile ? 4 : 8;
         const startIndex = (page - 1) * pageSize;
         const pageProjects = projects.slice(startIndex, startIndex + pageSize);
         const totalPages = Math.ceil(projects.length / pageSize);
@@ -309,12 +310,27 @@ export default function App() {
 
         pageProjects.forEach((p, idx) => {
           const displayIdx = startIndex + idx + 1;
-          portfolioLines.push({
-            type: "line",
-            text: `${displayIdx.toString().padStart(2, "0")}  ${p.titulo.padEnd(36)} ${p.tags[0]}`,
-            variant: "accent",
-            speed: 6,
-          });
+          if (isMobile) {
+            portfolioLines.push({
+              type: "line",
+              text: `${displayIdx.toString().padStart(2, "0")}  ${p.titulo}`,
+              variant: "accent",
+              speed: 6,
+            });
+            portfolioLines.push({
+              type: "line",
+              text: `    ${p.tags[0]}`,
+              variant: "accent",
+              instant: true,
+            });
+          } else {
+            portfolioLines.push({
+              type: "line",
+              text: `${displayIdx.toString().padStart(2, "0")}  ${p.titulo.padEnd(36)} ${p.tags[0]}`,
+              variant: "accent",
+              speed: 6,
+            });
+          }
         });
 
         let pagesText = "PAGES ";
@@ -749,7 +765,7 @@ export default function App() {
 
   return (
     <div
-      className="h-screen w-full flex flex-col p-6 md:p-12 relative overflow-hidden"
+      className="h-screen w-full flex flex-col p-3 sm:p-6 md:p-12 relative overflow-hidden"
       style={{
         backgroundColor: THEMES[currentTheme].bg,
         color: THEMES[currentTheme].fg,
@@ -761,7 +777,7 @@ export default function App() {
       <div className="scanline" />
       <div className="terminal-grid" />
 
-      <header className="flex justify-between items-center mb-8 border-b border-white/10 pb-4 z-10">
+      <header className="flex justify-between items-center mb-4 sm:mb-8 border-b border-white/10 pb-3 sm:pb-4 z-10">
         <div className="flex items-center gap-3">
           <TerminalIcon size={24} className="text-aizen-green" />
           <span className="text-lg tracking-widest uppercase opacity-70">
